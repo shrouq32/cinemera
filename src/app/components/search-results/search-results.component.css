@@ -1,0 +1,23 @@
+.container {
+    margin-top: 20px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .btn-outline-warning {
+    border: none;
+    background: transparent;
+  }
+  
+  .fa-heart, .fa-heart-o {
+    font-size: 20px;
+    color: #e3874f;
+  }
+  

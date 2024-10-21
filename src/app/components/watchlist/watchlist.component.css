@@ -1,0 +1,97 @@
+/* Container holding the cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; 
+}
+h3{
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 35px;
+  font-weight: bold;
+  color: #e3874f !important ;
+text-align: center;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.movie-card img {
+  width: 150px; 
+  height: auto;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #555;
+}
+
+.rating i {
+  color: #e3874f;
+  margin-right: 2px;
+}
+
+.btn-link i {
+  color: #e3874f;
+}
+
+.btn-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.custom-btn {
+  background-color: #e3874f;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.custom-btn a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.custom-btn:hover {
+  background-color: #e3874f;
+}
+
+.custom-btn a:hover {
+  color: #fff;
+}
+.fa-heart-circle-xmark{
+  font-size:300px;
+  color: gray !important;
+  opacity: 0.7;
+
+}
+
+.p{
+  font-size: 300px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: white;
+
+}

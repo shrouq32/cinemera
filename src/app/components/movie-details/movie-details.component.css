@@ -1,0 +1,296 @@
+/* Container for centering and limiting width */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Movie card styling with hover effects */
+.movie-card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Star rating styling */
+.star-rating i {
+  font-size: 1.2em;
+  margin-right: 2px;
+}
+
+/* Button styles */
+.btn-warning {
+  background-color: #ffc107;
+  border: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Badge styling */
+.badge {
+  border: 1px solid #ffc107;
+  color: #333;
+  font-size: 0.8em;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+}
+
+/* Movie details section styling */
+.movie-details {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-details h3 {
+  color: #ffc107;
+}
+
+.movie-details p {
+  line-height: 1.6;
+}
+
+.movie-details img {
+  max-width: 100%;
+  height: auto;
+}
+
+.movie-details .production-companies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .col-md-4,
+  .col-md-8 {
+    width: 100%;
+  }
+
+  .movie-card {
+    margin-bottom: 15px;
+  }
+
+  .movie-details .production-companies {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-description {
+    max-width: 100%;
+  }
+}
+
+.movie-description {
+  max-width: 80%;
+}
+
+/* Image container and overlay styling */
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  min-height: 500px;
+}
+.loader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensure it appears above the image */
+}
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+.image-container img {
+  display: block;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay .btn {
+  color: #fff; /* Ensure button text is visible */
+}
+
+.overlay .btn-custom {
+  background-color: #007bff; /* Primary color */
+  color: #fff; /* White text */
+  border: 1px solid #007bff; /* Border matching the background */
+  padding: 10px 20px; /* Add some padding */
+  font-size: 16px; /* Adjust font size */
+  border-radius: 0.25rem; /* Rounded corners */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+}
+
+.overlay .btn-custom:hover {
+  background-color: #0056b3; /* Darker shade for hover */
+  border-color: #0056b3; /* Match the border with the background on hover */
+}
+
+/* Flexbox utility */
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Margin utility */
+.ms-2 {
+  margin-left: 0.5rem;
+}
+
+/* Watchlist Button */
+.btn-outline-danger {
+  border-color: #dc3545; 
+  color: #dc3545;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545; 
+  color: #fff; 
+}
+
+/* Back to List Button */
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d; 
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d; 
+  color: #fff; 
+}
+
+/* Additional styling for heart icon */
+.heart-icon {
+  font-size: 1.25rem; 
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.heart-icon.text-muted {
+  color: #6c757d; 
+}
+
+.heart-icon.text-danger {
+  color: #dc3545; 
+  transform: scale(1.2); 
+}
+
+/* Container for buttons */
+.btn-container {
+  margin-top: 1rem;
+}
+
+/* Styling for the watchlist button */
+.watchlist-btn {
+  background-color: #ffffff; 
+  border: 1px solid #ced4da; 
+  color: #495057;
+  border-radius: 0.375rem; 
+  padding: 0.5rem 1rem;
+  font-size: 1rem; 
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, transform 0.3s ease;
+}
+
+.watchlist-btn:hover {
+  background-color: #f8f9fa; 
+  border-color: #adb5bd; 
+}
+.text-justify {
+  text-align: justify;
+}
+.text{
+  background: linear-gradient(to right, #e3874f, #707070);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+
+
+}
+.btn-link {
+  font-size: 1.5rem;
+  color: #e3874f;
+  }
+  .btn-search{
+    background-color: #e3874f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+
+  .carousel-inner {
+    display: flex;
+  }
+  
+  .carousel-item {
+    flex: 1 0 auto;
+    max-width: 100%;
+  }
+  
+  .card {
+    margin: 0 10px; /* Adjust spacing between cards */
+    transition: transform 0.3s ease;
+  }
+  
+  
+.carousel-control-prev, .carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}

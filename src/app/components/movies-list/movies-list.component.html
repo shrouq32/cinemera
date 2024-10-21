@@ -1,0 +1,52 @@
+<div class=" " style="padding: 0; width: 100%;">
+  <!-- Welcome Header -->
+  <div class=" " style="width: 100%;">
+    <div class="col-12 text-center welcome-header">
+      <h1>Welcome to our movie app</h1>
+      <p>Millions of movies, TV shows, and people to discover. Explore now.</p>
+      <div class="input-group mb-4 w-50 mx-auto">
+        <input type="text" [(ngModel)]="searchQuery" class="form-control" placeholder="Search for movies..." />
+        <div class="input-group-append">
+          <button class="btn btn-search " type="button" (click)="searchMovies()">
+            <i class="fas fa-search"></i> Search
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Now Playing Section -->
+    <div class="row">
+      <div class="col-12">
+        <h3 class="text">Now Playing</h3>
+        <div class="row" style="margin-left: 40px; margin-right: 40px;">
+          <!-- Movie Card -->
+          @for(movie of movies; track movie.id){
+          <div  class="col-md-3 mb-4">
+          <app-movie-card
+          [movie]="movie">
+
+          </app-movie-card>
+          </div>
+        }
+        </div>
+
+        <!-- Pagination -->
+        <nav>
+          <ul class="pagination justify-content-center">
+            <li class="page-item" [ngClass]="{'disabled': currentPage === 1}">
+              <a class="page-link" (click)="previousPage()">Previous</a>
+            </li>
+            @for(page of [1, 2, 3, 4, 5]; track $index){
+            <li class="page-item" >
+              <a class="page-link" (click)="getMoviesByPage(page)">{{ page }}</a>
+            </li>
+          }
+            <li class="page-item">
+              <a class="page-link" (click)="nextPage()">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+        
+    </div>
+  </div>

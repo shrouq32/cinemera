@@ -1,0 +1,41 @@
+<div class="container mt-5">
+    <h3 class="text mb-5" style="color: #e3874f;">Search Results for "{{ searchQuery }}"</h3>
+  
+    @if(searchResults.length > 0){
+    <div >
+      <div class="row">
+        @for(movie of searchResults; track movie.id){
+        <div  class="col-md-3 mb-4">  
+          <div class="card movie-card h-100 position-relative">
+            <img class="card-img-top" style="height: 380px;" [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" alt="{{ movie.title }}">
+            <div class="card-body text-center">
+              <h5 class="card-title">{{ movie.title }}</h5>
+              <div class="rating-circle" [ngClass]="{
+                  'rating-low': movie.vote_average <= 5,
+                  'rating-mid': movie.vote_average > 5 && movie.vote_average <= 7,
+                  'rating-high': movie.vote_average > 7
+                }">
+                <span>{{ movie.vote_average | number:'1.1-1' }}</span>
+              </div>
+              <div class="d-flex justify-content-evenly align-items-center">
+                <p class="card-text text-muted m-0">{{ movie.release_date | date:'MMM d, y' }}</p>
+                <button class="btn btn-link" (click)="toggleWatchlist(movie)">
+                  <i class="fas fa-heart" [ngClass]="isInWatchlist(movie.id) ? 'text-warning' : 'text-muted'"></i>
+                </button>
+              </div>
+              <button class="btn btn-warning mt-2" (click)="goToMovieDetails(movie.id)">View Details</button>
+
+            </div>
+          </div>
+        </div>
+      }
+      </div>
+    </div>
+  }@else{
+  
+    <ng-template >
+      <p>No movies found for "{{ searchQuery }}".</p>
+    </ng-template>
+  }
+  </div>
+  

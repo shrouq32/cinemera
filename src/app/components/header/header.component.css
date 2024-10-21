@@ -1,0 +1,92 @@
+/* Header Component CSS */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 15px 30px;
+    box-shadow: 0 -4px 21px white;
+ 
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-left {
+    flex: 1;
+    color:
+    #ececeb;
+}
+
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    color:
+    #ececeb;
+}
+
+.navigation {
+    margin-right: 20px;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+
+
+
+
+.cart-icon {
+    position: relative;
+    
+}
+
+.cart-icon a {
+    color: #ececeb;
+    text-decoration: none;
+    font-size: 1.2rem;
+    cursor: pointer; 
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #707070;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px;
+  
+   
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    
+    z-index: 1;
+}
+
+
+
+
+.fa-heart {
+  font-size: 30px;
+  color: #e3874f;
+}
+
+.cart-count {
+  font-size: 12px;
+ text-align: center;
+ margin-bottom: -3px;
+  color: #fff;  
+}
